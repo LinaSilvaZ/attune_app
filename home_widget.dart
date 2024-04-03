@@ -3,9 +3,9 @@ import 'package:gridview_menu/gridview_menu.dart';
 //For the authentication page
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 //To use google fonts
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 //To set the different routes for out project
-import 'package:flutter_project/route/route.dart' as route;
+//import 'package:flutter_project/route/route.dart' as route;
 
 class HomeWidget extends StatefulWidget {
   final List<MenuItem>? menuItem;
@@ -30,17 +30,17 @@ class _HomeWidgetState extends State<HomeWidget> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(103, 134, 183, 1),
-        title: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          Text(
-            "@ttune",
-            style: GoogleFonts
-                .gluten(), /*TextStyle(
-                  color: Colors.white70,
-                  fontSize: 36,
-                  fontWeight: FontWeight.w500
-                ),*/
-          ),
-          /* actions: <Widget>[
+        title: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "@ttune",
+                style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 36,
+                    fontWeight: FontWeight.w500),
+              ),
+              /* actions: <Widget>[
           IconButton(
             icon: Icon(_showList ? Icons.grid_on : Icons.grid_off),
             onPressed: () {
@@ -52,8 +52,8 @@ class _HomeWidgetState extends State<HomeWidget> {
             },
           ),
         ],*/
-          const SignOutButton(),
-        ]),
+              SignOutButton(),
+            ]),
       ),
       /*title: const FittedBox(
           fit: BoxFit.fitWidth,
@@ -79,8 +79,8 @@ class _HomeWidgetState extends State<HomeWidget> {
       ),
       /*the bottomNavigationBar help us to stablish in which screen will be set up. For this case it would 
       be the Index 0 -> Home. 
-      The other options that user can pressed are 'Contact Us' and 'About Us' */
-      bottomNavigationBar: BottomNavigationBar(
+      The other options that user can pressed are 'Select City' */
+      /*bottomNavigationBar: BottomNavigationBar(
           backgroundColor: const Color.fromRGBO(103, 134, 183, 1),
           currentIndex: 0,
           items: const [
@@ -92,10 +92,10 @@ class _HomeWidgetState extends State<HomeWidget> {
               icon: Icon(Icons.email),
               label: 'Select City',
             ),
-            /*BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'About Us',
-            ),*/
+            ),
           ],
           onTap: (int index) {
             switch (index) {
@@ -105,11 +105,11 @@ class _HomeWidgetState extends State<HomeWidget> {
               case 1:
                 Navigator.pushNamed(context, route.selectCity);
                 break;
-              /*case 2:
+              case 2:
                 Navigator.pushNamed(context, route.aboutUs);
-                break;*/
+                break;
             }
-          }),
+          }),*/
     );
   }
 }
