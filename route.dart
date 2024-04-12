@@ -4,6 +4,8 @@ import 'package:flutter_project/screens/menu_home.dart';
 //import 'package:flutter_project/screens/select_city.dart';
 //import 'package:flutter_project/screens/contactUs.dart';
 import 'package:flutter_project/screens/auth_gate.dart';
+import 'package:firebase_auth_platform_interface/src/auth_provider.dart'
+    as firebase;
 
 const String menuHome = 'Home Page';
 //const String selectCity = 'Select City';
