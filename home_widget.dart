@@ -17,8 +17,7 @@ class HomeWidget extends StatefulWidget {
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
-  final bool _showList =
-      false; // False shows a grid view or List view if its true
+  bool _showList = false; // False shows a grid view or List view if its true
 
   @override
   void initState() {
@@ -40,25 +39,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                     fontSize: 36,
                     fontWeight: FontWeight.w500),
               ),
-              /* actions: <Widget>[
-          IconButton(
-            icon: Icon(_showList ? Icons.grid_on : Icons.grid_off),
-            onPressed: () {
-              if (mounted) {
-                setState(() {
-                  _showList = !_showList;
-                });
-              }
-            },
-          ),
-        ],*/
               SignOutButton(),
             ]),
-      ),
-      /*title: const FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text('Bienvenid@'),
-        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(_showList ? Icons.grid_on : Icons.grid_off),
@@ -70,8 +52,8 @@ class _HomeWidgetState extends State<HomeWidget> {
               }
             },
           ),
-        ],*/
-
+        ],
+      ),
       body: MobileSidebar(
         breakPoint: 3000,
         items: widget.menuItem!,

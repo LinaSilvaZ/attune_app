@@ -5,6 +5,7 @@ import 'package:gridview_menu/gridview_menu.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'home_widget.dart';
 import 'housing.dart';
+import 'select_city.dart';
 
 class MenuHome extends StatefulWidget {
   final Color color = const Color.fromRGBO(
@@ -23,7 +24,7 @@ class _MenuHomeState extends State<MenuHome> {
       MenuItem(
         icon: Icons.home_work_rounded,
         color: widget.color,
-        subtitle: 'Housi',
+        subtitle: '',
         title: 'Housing',
         child: const Housing(),
         disabled: true,
@@ -31,7 +32,7 @@ class _MenuHomeState extends State<MenuHome> {
       MenuItem(
         icon: Icons.bedroom_parent_rounded,
         color: widget.color,
-        subtitle: 'Furnitu',
+        subtitle: '',
         title: 'Furniture',
         child: const Housing(),
         disabled: true,
@@ -39,7 +40,7 @@ class _MenuHomeState extends State<MenuHome> {
       MenuItem(
         icon: Icons.local_grocery_store_rounded,
         color: widget.color,
-        subtitle: 'Groce',
+        subtitle: '',
         title: 'Grocery',
         child: const Housing(),
         disabled: true,
@@ -47,7 +48,7 @@ class _MenuHomeState extends State<MenuHome> {
       MenuItem(
         icon: Icons.store_mall_directory_rounded,
         color: widget.color,
-        subtitle: 'Cloth',
+        subtitle: '',
         title: 'Clothes',
         child: const Housing(),
         disabled: true,
@@ -55,7 +56,7 @@ class _MenuHomeState extends State<MenuHome> {
       MenuItem(
         icon: Icons.calendar_month_rounded,
         color: widget.color,
-        subtitle: 'Events',
+        subtitle: '',
         title: 'Events',
         child: const Housing(),
         disabled: true,
@@ -63,10 +64,10 @@ class _MenuHomeState extends State<MenuHome> {
       MenuItem(
         icon: Icons.dashboard_customize_rounded,
         color: widget.color,
-        subtitle: 'Boa',
+        subtitle: '',
         title: 'Board',
-        child: const Housing(),
-        disabled: true,
+        child: const SelectCity(),
+        disabled: false,
       ),
     ];
     return HomeWidget(

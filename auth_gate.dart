@@ -1,3 +1,5 @@
+import 'package:firebase_auth_platform_interface/src/auth_provider.dart'
+    as firebase;
 import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
